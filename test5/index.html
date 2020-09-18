@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="name">
+    <hr>
+    name: {{name}}
+    <hr>
+    <input type="text" v-model="form.a">
+    <ul>
+      <li>
+        <div>{{name}}</div>
+      </li>
+    </ul>
+    <hr>
+    form.a: {{form.a}}
+  </div>
+  <script src="./watcher.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./mvvm.js"></script>
+  <script>
+    let vm = new Mvvm({
+      el: '#app', // document.querySelector('#app')
+      data: {
+        form: {
+          a: 12
+        },
+        name: '李大玄'
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: 李继玄（lijixuan@quclouds.com）
+ * @Date: 2020-09-16 09:48:12
+ * @LastEditors: 李继玄（lijixuan@quclouds.com）
+ * @LastEditTime: 2020-09-16 16:40:06
+ * @FilePath: /js-test/MVVM/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="msg">
+    {{msg}}
+    <input type="text" v-model="msg">
+    {{msg}}
+    <ul>
+      <li>
+        <div>123</div>
+      </li>
+    </ul>
+    <input type="text" v-model="msg">
+    {{msg}}
+  </div>
+  
+  <!-- <script src="./vue.js"></script> -->
+  <script src="./watcher.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./MVVM.js"></script>
+  <script>
+    let vm = new MVVM({
+      el: '#app', // document.getElementById('app');
+      data: {
+        msg: '李大玄',
+        form: {
+          a: 'da'
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>

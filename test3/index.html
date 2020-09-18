@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: 李继玄（lijixuan@quclouds.com）
+ * @Date: 2020-09-17 16:32:25
+ * @LastEditors: 李继玄（lijixuan@quclouds.com）
+ * @LastEditTime: 2020-09-17 18:29:30
+ * @FilePath: /MVVM/test3/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="name">
+    <hr>
+    {{name}}
+    <hr>
+    {{form.a}}
+  </div>
+  <script src="./watcher.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./mvvm.js"></script>
+  <script>
+    let vm = new Mvvm({
+      el: '#app',
+      data: {
+        name: '李大玄',
+        form: {
+          a: '11'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
